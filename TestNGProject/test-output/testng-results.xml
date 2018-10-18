@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="29" started-at="2018-10-17T13:49:12Z" finished-at="2018-10-17T13:49:12Z">
+  <suite name="Default suite" duration-ms="43" started-at="2018-10-18T05:26:25Z" finished-at="2018-10-18T05:26:25Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="29" started-at="2018-10-17T13:49:12Z" finished-at="2018-10-17T13:49:12Z">
+    <test name="Default test" duration-ms="43" started-at="2018-10-18T05:26:25Z" finished-at="2018-10-18T05:26:25Z">
       <class name="LaunchOfflineProjectAndRegisterNewUser">
-        <test-method status="PASS" signature="EnvironmentalSetUp()[pri:0, instance:LaunchOfflineProjectAndRegisterNewUser@18f65a4]" name="EnvironmentalSetUp" is-config="true" duration-ms="11591" started-at="2018-10-17T13:49:01Z" finished-at="2018-10-17T13:49:12Z">
+        <test-method status="PASS" signature="EnvironmentalSetUp()[pri:0, instance:LaunchOfflineProjectAndRegisterNewUser@18f65a4]" name="EnvironmentalSetUp" is-config="true" duration-ms="26236" started-at="2018-10-18T05:25:59Z" finished-at="2018-10-18T05:26:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EnvironmentalSetUp -->
-        <test-method status="FAIL" signature="test()[pri:0, instance:LaunchOfflineProjectAndRegisterNewUser@18f65a4]" name="test" duration-ms="9" started-at="2018-10-17T13:49:12Z" finished-at="2018-10-17T13:49:12Z">
+        <test-method status="FAIL" signature="test()[pri:0, instance:LaunchOfflineProjectAndRegisterNewUser@18f65a4]" name="test" duration-ms="8" started-at="2018-10-18T05:26:25Z" finished-at="2018-10-18T05:26:25Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException

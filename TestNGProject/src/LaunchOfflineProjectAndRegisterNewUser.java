@@ -50,6 +50,7 @@ public class LaunchOfflineProjectAndRegisterNewUser {
 	{
 		System.out.println("Test code executed");
 		RegisterLink1.findElement(By.xpath("html/body/div[1]/div[2]/a")); 
+		//code
 		RegisterLink1.click();
 //		NewName.findElement(By.xpath(".//*[@id='name']"));
 //		NewMobile.findElement(By.xpath(".//*[@id='mobile']"));
