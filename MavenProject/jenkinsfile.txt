@@ -9,13 +9,19 @@ pipeline {
             }
         }
         stage('Test') {
-            steps {
+            steps {			
                 echo 'Testing.....'
-            }
+            }			
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying.....'
+                echo 'Deploying.....'	
+            }
+            post {		
+         	   success {
+            	echo 'Now Archiving ...'
+            archiveArtifacts artifacts: '**/target/*.war'
+            }	
             }
         }
     }
