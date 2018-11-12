@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Deploy to Staging') {
             steps {
-                echo 'Deploying.....'	
+                echo 'Deploying To Staging.....'	
                 build job: 'Project Deploy_Artifact_to_staging'
             }
         
