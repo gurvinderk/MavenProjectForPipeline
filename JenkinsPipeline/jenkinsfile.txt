@@ -10,21 +10,51 @@ pipeline {
         }
         stage('Test') {
             steps {			
-                echo 'Testing.....'
+                echo 'Testing steps.....'
             }			
         }
         stage('Deploy to Staging') {
             steps {
-                echo 'Deploying To Staging.....'	
+                echo 'Deploying To Staging.....Jenkins job for deploying artifact to stagin called'	
                 build job: 'Project Deploy_Artifact_to_staging'
             }
         
             post {		
          	   success {
-            	echo 'Now Archiving ...'
+            	echo 'Job to Archive to staging success...'
             archiveArtifacts artifacts: '**/target/*.war'
             }	
+            failure
+            {
+             echo 'Job to Archive to staging Failed...Enter send email notification steps here'
+            }
             }
         }
+        
+        
+        stage('Deploy to Production') {
+            steps {
+                echo 'Deploying To Production.....Jenkins job for deploying artifact to Production called'	
+                
+                timeout(time:5, unit:'DAYS')
+                {
+                input message :'Approve Production Deployment?'
+                }
+                
+                build job: 'deploy-to-prod'
+            }
+        
+            post {		
+         	   success {
+            	echo 'Job to Archive to Production success...'
+            archiveArtifacts artifacts: '**/target/*.war'
+            }	
+            failure
+            {
+             echo 'Job to Archive to Production Failed...Enter send email notification steps here'
+            }
+            }
+        }
+        
     }
 }
